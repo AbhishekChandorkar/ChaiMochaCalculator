@@ -1,0 +1,60 @@
+<!DOCTYPE>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css"/>
+  <title> CALCULATOR!!! </title>
+</head>
+<body>
+  <script type="text/javascript" src="calc.js">
+  </script>
+
+<form name="calculator">
+
+  <div>
+    <input class="clear" type="button" value="C" name="clear" onclick="calculator.display.value=''"></input>
+    <input class="display" type="text" name="display" style="text-align:right"></input>
+  </div>
+
+  <div class="keys">
+    <div>
+    </br>
+    <span><input class="digits" type="button" value="7" onclick="calculator.display.value+=7"/></span>
+    &nbsp;
+    <span><input class="digits" type="button" value="8" onclick="calculator.display.value+=8"/></span>
+    &nbsp;
+    <span><input class="digits" type="button" value="9" onclick="calculator.display.value+=9"/></span>
+    &nbsp;
+    <span><input class="operators" type="button" value="+" onclick="calculator.display.value+='+'"/></span>
+  </div>
+  <div>
+  </br>
+    <span><input class="digits" type="button" value="4" onclick="calculator.display.value+=4"/></span>
+    &nbsp;
+    <span><input class="digits" type="button" value="5" onclick="calculator.display.value+=5"/></span>
+    &nbsp;
+    <span><input class="digits" type="button" value="6" onclick="calculator.display.value+=6"/></span>
+    &nbsp;
+    <span><input class="operators" type="button" value="-" onclick="calculator.display.value+='-'"/></span>
+  </div>
+  <div>
+  </br>
+    <span><input class="digits" type="button" value="1" onclick="calculator.display.value+=1"/></span>
+    &nbsp;
+    <span><input class="digits" type="button" value="2" onclick="calculator.display.value+=2"/></span>
+    &nbsp;
+    <span><input class="digits" type="button" value="3" onclick="calculator.display.value+=3"/></span>
+    &nbsp;
+    <span><input class="operators" type="button" value="X" onclick="calculator.display.value+='*'"/></span>
+  </div>
+  <div>
+  </br>
+    <span><input class="decimal" type="button" value="." onclick="calculator.display.value+='.'"/></span>
+    &nbsp;
+    <span><input class="digits" type="button" value="0" onclick="calculator.display.value+=0"/></span>
+    &nbsp;
+    <span><input class="equals" type="button" value="=" onclick="run(calculator.display.value)"/></span>
+    &nbsp;
+    <span><input class="operators" type="button" value="/" onclick="calculator.display.value+='/'"></span>
+</form>
+</body>
+</html>
