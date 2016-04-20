@@ -1,0 +1,19 @@
+{
+  "name": "Calci",
+  "homepage": "https://github.com/AbhishekChandorkar/ChaiMochaCalculator",
+  "description": "calculator app",
+  "main": "index.html",
+  "keywords": [
+    "mocha",
+    "chai"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
