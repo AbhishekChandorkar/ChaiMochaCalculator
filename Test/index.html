@@ -52,7 +52,7 @@
     &nbsp;
     <span><input class="digits" type="button" value="0" onclick="calculator.display.value+=0"/></span>
     &nbsp;
-    <span><input class="equals" type="button" value="=" onclick="run(calculator.display.value)"/></span>
+    <span><input class="equals" type="button" value="=" onclick="calculator.display.value=run(calculator.display.value)"/></span>
     &nbsp;
     <span><input class="operators" type="button" value="/" onclick="calculator.display.value+='/'"></span>
 </form>

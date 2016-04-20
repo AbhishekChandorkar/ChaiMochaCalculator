@@ -1,6 +1,10 @@
-exports.check = function run(text){
+<script type="text/javascript">
+
+var test = module.exports = function run(obj){
   console.log('Running');
-  var res = eval(text);
+  var res = eval(obj);
   //calculator.display.value=res;
   return res;
 }
+
+</script>

@@ -1,11 +1,11 @@
 var chai = require('chai');
-var expect = require('chai').expect;
-var func = require('./calc');
+var expect = chai.expect;
+var test = require('./calc');
 
-describe('check',function() {
+describe('test',function() {
   it('should pass if ok',function(){
     var errormsg = "Cannot divide by zero";
-    var content = func.check('0/0');
+    var content = test.check('1');
 
     expect('content').to.not.contain('0');
   });
