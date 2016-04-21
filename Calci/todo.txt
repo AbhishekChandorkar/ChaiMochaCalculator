@@ -1,0 +1,6 @@
+
+
+
+- cosine/sine
+- eval --> self logic
+- all test cases.

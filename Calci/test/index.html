@@ -1,41 +1,70 @@
 
 <html>
 <head>
+
+  <script type="text/javascript" src="../js/new.js" defer></script>
+
   <meta charset="utf-8">
   <title>Calculator</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet" type="text/css"/>
-  <link href="calci.css" rel="stylesheet" type="text/css"/>
+  <link href="calc.css" rel="stylesheet" type="text/css"/>
+  <link href="../bower_components/mocha/mocha.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-  <div id="mocha"></div>
-  <script type="text/javascript" src="../js/calci.js"></script>
-  <div id="calculator">
 
-    <!-- <p> is optional (for css)-->
-    <div class="clear">C</div>
-    <div class="result"><p></p></div>
+    <div id="mocha"></div>
+    <script src="../bower_components/chai/chai.js"></script>
+    <script src="../bower_components/mocha/mocha.js"></script>
+    <script >mocha.setup('bdd')</script>
+  <!--  <script src="test.js"></script> -->
+    <script>
+      mocha.run();
+    </script>
+    <h1><hr></hr></h1>
 
+    <center>
+    <div >
+  <form name="calculator" style="box-sizing: border-box">
 
-    <span>7</span>
-    <span>8</span>
-    <span>9</span>
-    <span>+</span>
+    <div id = "result" class="result">
+      <input name="btnClear" type="button" value='C' onclick="display_clear()"/>
+      <input type="input" id="txtbox" name="txtinp" value=""/>
+    </div>
+    <div id="digits" class = "digits">
+      <span><input name="btn7" type="button" value=7 onclick="display_number(calculator.btn7.value)"/></span>
+      <span><input name="btn8" type="button" value=8 onclick="display_number(calculator.btn8.value)"/></span>
+      <span><input name="btn9" type="button" value=9 onclick="display_number(calculator.btn9.value)"/></span>
+      <span><input name="btnAdd" type="button" value='+' onclick="display_operator(calculator.btnAdd.value)"/></span>
+      <br/>
+      <span><input name="btn4" type="button" value=4 onclick="display_number(calculator.btn4.value)"/></span>
+      <span><input name="btn5" type="button" value=5 onclick="display_number(calculator.btn5.value)"/></span>
+      <span><input name="btn6" type="button" value=6 onclick="display_number(calculator.btn6.value)"/></span>
+      <span><input name="btnMinus" type="button" value='-' onclick="display_operator(calculator.btnMinus.value)"/></span>
+      <br/>
+      <span><input name="btn1" type="button" value=1 onclick="display_number(calculator.btn1.value)"/></span>
+      <span><input name="btn2" type="button" value=2 onclick="display_number(calculator.btn2.value)"/></span>
+      <span><input name="btn3" type="button" value=3 onclick="display_number(calculator.btn3.value)"/></span>
+      <span><input name="btnMult" type="button" value='x' onclick="display_operator(calculator.btnMult.value)"/></span>
+      <br/>
+      <span><input name="btn0" type="button" value=0 onclick="display_number(calculator.btn0.value)"/></span>
+      <span><input name="btnDot" type="button" value='.' onclick="display_number(calculator.btnDot.value)"/></span>
+      <span><input name="btnEqual" type="button" value='=' onclick="new_eval(calculator.txtinp.value)"/></span>
+      <span><input name="btnDivide" type="button" value='÷' onclick="display_operator(calculator.btnDivide.value)"/></span>
+      <br/>
+      <span><input name="btnPercent" type="button" value='@' onclick="display_operator(calculator.btnPercent.value)"/></span>
+      <span><input name="btnMod" type="button" value='%' onclick="display_operator(calculator.btnMod.value)"/></span>
+      <span><input name="btnFact" type="button" value='!' onclick="display_operator(calculator.btnFact.value)"/></span>
+      <!--
 
-    <span>4</span>
-    <span>5</span>
-    <span>6</span>
-    <span>-</span>
+      <span><input name="btn3" type="button" value=3 onclick="display_number(calculator.btn3.value)"/></span>
+      <span><input name="btnMult" type="button" value='x' onclick="display_operator(calculator.btnMult.value)"/></span>
+    -->
+      <br/>
 
-    <span>1</span>
-    <span>2</span>
-    <span>3</span>
-    <span>÷</span>
+    </div>
 
-    <span>0</span>
-    <span>.</span>
-    <span>=</span>
-    <span>x</span>
+</form>
+</div>
 
-  </div>
 </body>
 </html>

@@ -5,8 +5,14 @@
   <title> CALCULATOR!!! </title>
 </head>
 <body>
-  <script type="text/javascript" src="calc.js">
-  </script>
+  <div id="mocha"></div>
+  <script src="../bower_components/chai/chai.js"></script>
+  <script src="../bower_components/mocha/mocha.js"></script>
+    <script type="text/javascript" src="calc.js">  </script>
+  <script >mocha.setup('bdd')</script>
+  <script>
+  mocha.run();
+    </script>
 
 <form name="calculator">
 

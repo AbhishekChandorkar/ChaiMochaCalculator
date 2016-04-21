@@ -1,4 +1,4 @@
-window.onload = function () {
+//window.onload =  function () {
   var buttons = document.getElementsByTagName('span'),
       result = document.querySelectorAll('.result p')[0],
       clear = document.getElementsByClassName('clear')[0];
@@ -30,13 +30,10 @@ window.onload = function () {
   function calculate(i) {
     return function () {
             var final_res = result.innerHTML;
-
             var bugFix = final_res.replace(/\d+/g, function(numb){
                 return parseInt(numb, 10);
             });
-
-
       result.innerHTML = eval(bugFix);
     };
   }
-};
+//};
